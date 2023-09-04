@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="7fc8e2717d4b463bb57283188321c2bc" Name="Diagram1">
+        <EntityTypeShape EntityType="LeaveSystemDatabaseModel.User" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeaveSystemDatabaseModel.UserRole" Width="1.5" PointX="5" PointY="3.125" />
+        <AssociationConnector Association="LeaveSystemDatabaseModel.FK_UserRole_User" />
+        <EntityTypeShape EntityType="LeaveSystemDatabaseModel.Employee" Width="1.5" PointX="0.75" PointY="2.125" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

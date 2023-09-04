@@ -1,0 +1,83 @@
+﻿@model LeaveManagerTest5.Models.Identity
+
+@{
+    Layout = null;
+    ViewBag.Title = "Login";
+}
+
+
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <title>LMR_SYSTEM</title>
+    <!-- Meta tag Keywords -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <!-- //Meta tag Keywords -->
+    
+    <link href="//fonts.googleapis.com/css2?family=Kumbh+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <!--/Style-CSS -->
+    <link rel="stylesheet" href="~/Content/css/style.css" type="text/css" media="all" />
+    <!--//Style-CSS -->
+    <link rel="stylesheet" href="~/Content/css/font-awesome.min.css" type="text/css" media="all">
+
+</head>
+
+
+<body>
+    <div class="w3l-signinform">
+        <!-- container -->
+        <div class="wrapper">
+            <!-- main content -->
+            <div class="w3l-form-info">
+                <div class="w3_info">
+
+
+                    @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { }))
+                    {
+                        @Html.AntiForgeryToken()
+
+                        <h1>LEAVE REQUEST MANAGEMENT SYSTEM</h1>
+
+                        <h2>LOGIN</h2>
+
+                        <div class="input-group">
+                            <span><i class="fa fa-user" aria-hidden="true"></i></span>
+                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @placeholder = "Username" } })
+                            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+
+
+                        </div>
+                        <div class="input-group two-groop">
+                            <span><i class="fa fa-key" aria-hidden="true"></i></span>
+                            @Html.EditorFor(model => model.password, new { htmlAttributes = new { @placeholder = "password" } })
+                            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+
+
+                        </div>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                        <button class="btn btn-primary btn-block" type="submit">Log In</button>
+                        <br />
+                      
+
+
+
+
+                    }
+
+                </div>
+
+            </div>
+        </div>
+       
+
+    </div>
+
+</body>
+
+</html>
+
+
+
