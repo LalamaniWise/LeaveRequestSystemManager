@@ -51,7 +51,7 @@
                         </div>
                         <div class="input-group two-groop">
                             <span><i class="fa fa-key" aria-hidden="true"></i></span>
-                            @Html.EditorFor(model => model.password, new { htmlAttributes = new { @placeholder = "password" } })
+                            @Html.PasswordFor(model => model.password, new { htmlAttributes = new { @placeholder = "password" } })
                             @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
 
 
